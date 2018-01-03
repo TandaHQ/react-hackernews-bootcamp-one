@@ -69,7 +69,7 @@ ReactDOM.render(element, root);
 
 Save and refresh your page. You should see no changes. If you inspect the elements on the page, you should see that our `root` element has a single child - a `DIV` with the text 'Hello Hacker News'.
 
-If you're lost, or you get stuck, your code should look like [this](https://github.com/TandaHQ/react-hackernews-bootcamp-one/blob/942ec190e31ec4bc2ebfd751c80c0d04d424c159/source/index.js).
+If you're lost, or you get stuck, your code should look like [this](https://github.com/TandaHQ/react-hackernews-bootcamp-one/blob/zero-my-first-element/source/index.js).
 
 ### Moving to JSX
 
@@ -95,7 +95,7 @@ const element = <div>Hello Hacker News</div>
 
 Save and refresh. You should see no changes.
 
-If you're lost, or you get stuck, your code should look like [this](https://github.com/TandaHQ/react-hackernews-bootcamp-one/blob/5a615dab5d1fc2c8bafb91ebd1634225e2c7c1d5/source/index.js).
+If you're lost, or you get stuck, your code should look like [this](https://github.com/TandaHQ/react-hackernews-bootcamp-one/blob/zero-moving-to-jsx/source/index.js).
 
 ### Some more JSX
 
