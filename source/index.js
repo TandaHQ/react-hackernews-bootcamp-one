@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const element = React.createElement(
-  'div',
-  null,
-  'Hello Hacker News',
-);
+const element = <div>Hello Hacker News</div>;
 
 const root = document.getElementById('root');
 
