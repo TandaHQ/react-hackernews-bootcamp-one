@@ -1,2 +1,2 @@
-# react-bootcamp
-A hacker new reader app
+# react-hackernews-bootcamp-one
+A hacker news reader app
