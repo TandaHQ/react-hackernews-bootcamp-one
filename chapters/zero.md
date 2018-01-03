@@ -49,9 +49,9 @@ Putting this together, our first element is constructed like this:
 
 ```js
 const element = React.createElement(
-	'div', // the type of element we're creating
-	null, // any props ('attributes') we're giving it
-	'Hello Hacker News' // The children of this element.
+  'div', // the type of element we're creating
+  null, // any props ('attributes') we're giving it
+  'Hello Hacker News' // The children of this element.
 );
 ```
 
@@ -61,7 +61,7 @@ Now that we have our element, we need to put it onto the screen.  To start, we n
 const root = document.getElementById('root');
 ```
 
-And then once we have it, we can use `ReactDOM` to render it for us, using the `render` method. `render` takes two arguments. The first is the element to render, and the second is the actual DOM node to render it to (`root` in our case).
+And then once we have it, we can use `ReactDOM` to render it for us, using the `render` method. `render` takes two arguments. The first is the React element to render, and the second is the actual DOM node to render it to (`root` in our case).
 
 ```js
 ReactDOM.render(element, root);
@@ -69,7 +69,7 @@ ReactDOM.render(element, root);
 
 Save and refresh your page. You should see no changes. If you inspect the elements on the page, you should see that our `root` element has a single child - a `DIV` with the text 'Hello Hacker News'.
 
-If you're lost, this is commit fd43b12 on the branch `chapter-one`.
+If you're lost, or you get stuck, your code should look like [this](https://github.com/TandaHQ/react-hackernews-bootcamp-one/blob/942ec190e31ec4bc2ebfd751c80c0d04d424c159/source/index.js).
 
 ### Moving to JSX
 
@@ -83,7 +83,7 @@ Wait, what? It's exactly what we had before! Let's break this down one more tiny
 
 ```jsx
 <div> {/* the element 'type' (we don't need quotes around 'div' anymore) */}
-	Hello Hacker News {/* the children - you can put as many as you like in here*/}
+  Hello Hacker News {/* the children - you can put as many as you like in here*/}
 </div> {/* the closing tag */}
 ```
 
@@ -95,7 +95,7 @@ const element = <div>Hello Hacker News</div>
 
 Save and refresh. You should see no changes.
 
-If you're lost, this is commit caa6562 on the branch `chapter-one`.
+If you're lost, or you get stuck, your code should look like [this](https://github.com/TandaHQ/react-hackernews-bootcamp-one/blob/5a615dab5d1fc2c8bafb91ebd1634225e2c7c1d5/source/index.js).
 
 ### Some more JSX
 
@@ -115,9 +115,9 @@ For interest's sake, this is the pure JavaScript for that JSX:
 
 ```js
 React.createElement(
-	'div',
-	{ dataTest: 10 },
-	'Hello Hacker News'
+  'div',
+  { dataTest: 10 },
+  'Hello Hacker News'
 );
 ```
 
@@ -156,11 +156,11 @@ Okay. We add the styles the same way we would in HTML, except that we have an ob
 
 ```jsx
 const element = 
-	<div
-		style={{ fontSize: 36, color: 'green' }} 
-	>
-		Hello Hacker News
-	</div>
+  <div
+    style={{ fontSize: 36, color: 'green' }} 
+  >
+    Hello Hacker News
+  </div>
 ```
 
 Save and reload - you should have some green text! It's not pretty, but it works.
@@ -171,12 +171,12 @@ React comes with a bunch of built-in helpers for events. We want the `onClick` o
 
 ```jsx
 const element = 
-	<div
-		style={{ fontSize: 36, color: 'green' }}
-		onClick={() => window.alert('Hello Hacker News')}
-	>
-		Hello Hacker News
-	</div>
+  <div
+    style={{ fontSize: 36, color: 'green' }}
+    onClick={() => window.alert('Hello Hacker News')}
+  >
+    Hello Hacker News
+  </div>
 ```
 
 Save and reload, and click the name. You should get an alert.
@@ -187,16 +187,16 @@ But we're better programmers than that. We're now using the same string twice - 
 const title = 'Hello Hacker News';
 
 const element = 
-	<div
-		style={{ fontSize: 36, color: 'green' }}
-		onClick={() => window.alert(title)}
-	>
-		{title}
-	</div>
+  <div
+    style={{ fontSize: 36, color: 'green' }}
+    onClick={() => window.alert(title)}
+  >
+    {title}
+  </div>
 ```
 
 We've just escaped from JSX mode to add a child that is a variable. We have used that same variable in the `onClick` handler.
 
 Save and reload for a final time to make sure it all works.
 
-That's the end of this chapter. If you've gotten stuck anywhere along the way, you can checkout the `chapter-one` branch to get to this point (and maybe see where you've gone wrong).
+That's the end of this chapter. You can view the entire project as it should be by going [here](https://github.com/TandaHQ/react-hackernews-bootcamp-one/tree/chapter-one). This is the starting point for `chapter-one`, too.
