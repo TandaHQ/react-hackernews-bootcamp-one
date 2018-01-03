@@ -10,7 +10,7 @@ const Webpack           = require('webpack');
 // more about webpack here https://webpack.js.org
 //
 
-const APP_BUILD  = Path.resolve(__dirname, 'build')
+const APP_BUILD  = Path.resolve(__dirname, 'dist')
 const APP_SOURCE = Path.resolve(__dirname, 'source')
 const APP_TITLE  = 'Hacker News Reader'
 
@@ -31,7 +31,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     compress: true,
-    contentBase: Path.join(__dirname, "dist"),
+    contentBase: APP_BUILD,
     historyApiFallback: true,
     host: "0.0.0.0",
     open: true,
