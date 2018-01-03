@@ -8,6 +8,7 @@ const APP_BUILD  = Path.resolve(__dirname, 'build')
 const APP_SOURCE = Path.resolve(__dirname, 'source')
 const APP_TITLE  = 'Hacker News Reader'
 
+
 module.exports = {
   devServer: {
     compress: true,
@@ -27,13 +28,12 @@ module.exports = {
     ],
   },
   plugins: [
-
     new HtmlWebpackPlugin({ title: APP_TITLE }),
     new Webpack.HotModuleReplacementPlugin(),
     new Webpack.NamedModulesPlugin(),
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      'process.env.DEBUG': JSON.stringify(process.env.DEBUG)
+      'process.env.DEBUG': JSON.stringify(process.env.DEBUG),
     }),
   ],
   resolve: {
