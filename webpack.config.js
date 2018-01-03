@@ -1,7 +1,6 @@
 const Path = require('path');
 
 const Autoprefixer      = require('autoprefixer');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PreCSS            = require('precss');
 const Webpack           = require('webpack');
 
@@ -14,7 +13,6 @@ const Webpack           = require('webpack');
 const APP_BUILD  = Path.resolve(__dirname, 'build')
 const APP_SOURCE = Path.resolve(__dirname, 'source')
 const APP_TITLE  = 'Hacker News Reader'
-
 
 const CSS_LOADER = [
   { loader: 'style-loader' },
@@ -33,14 +31,14 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     compress: true,
+    contentBase: Path.join(__dirname, "dist"),
     historyApiFallback: true,
     host: "0.0.0.0",
-    hot: true,
     open: true,
   },
   entry: APP_SOURCE,
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: APP_BUILD,
   },
   module: {
@@ -50,13 +48,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ title: APP_TITLE }),
-    new Webpack.HotModuleReplacementPlugin(),
     new Webpack.NamedModulesPlugin(),
-    new Webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      'process.env.DEBUG': JSON.stringify(process.env.DEBUG),
-    }),
   ],
   resolve: {
     extensions: [".jsx", ".js", ".json"],
