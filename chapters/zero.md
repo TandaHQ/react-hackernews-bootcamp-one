@@ -14,6 +14,8 @@ The bundle file contains all of your code, and all of your dependencies' code. I
 
 ### Commands
 
+`yarn` is a package manager built by Facebook that helps install and manage any code dependencies for your projects. It is similar to `npm`, which comes with `node`, but has advantages such as improved install speeds and shortened commands.
+
 You will need to have `yarn` installed. You can add this if you don't have it with `npm i -g yarn`. After that, to add dependencies, use `yarn add <dependency>`, and to start the server, use `yarn start`. You can start the server now and leave it running in the background - it will create a new bundle every time you change a file. It should also open your browser - if it doesn't, navigate to http://localhost:8082. You should see a message there that says 'Hello Hacker News'.
 
 ### Current Application
@@ -22,7 +24,7 @@ Our application source will live in `source/`. If you look in there now, there i
 
 ## Dependencies
 
-Let's start off by adding the depencies we need right now. To get started, at least, we need `react` and `react-dom`. Install these like this, from your terminal.
+Let's start off by adding the dependencies we need right now. To get started, at least, we need `react` and `react-dom`. Install these like this, from your terminal.
 
 ```
 yarn install react react-dom
@@ -106,7 +108,7 @@ In JSX, to 'escape' from JSX mode, and get back to regular JavaSript, surround y
 If you want to add a number as a prop, you could do:
 
 ```jsx
-<div data-test={10}>Hello Hacker News</div>
+<div dataTest={10}>Hello Hacker News</div>
 ```
 
 For interest's sake, this is the pure JavaScript for that JSX:
@@ -114,23 +116,23 @@ For interest's sake, this is the pure JavaScript for that JSX:
 ```js
 React.createElement(
 	'div',
-	{ 'data-test': true },
+	{ dataTest: 10 },
 	'Hello Hacker News'
 );
 ```
 
-The props we add just become an object that is the second argument to `createElement`.
+The props we add just become an object that is the second argument to `createElement`. Note that we use `camelCase` for *all* props in JSX, because they're easier to type in objects, and easier to access values from as well, which will be useful later.
 
 Strings are the rare exception to this - JSX knows how to handle them *without* escaping:
 
 ```jsx
-<div data-test="Some Content">Hello Hacker News</div>
+<div dataTest="Some Content">Hello Hacker News</div>
 ```
 
 If you wanted to add an object as a 'prop', you can do:
 
 ```jsx
-<div data-test={{ test: true }}>Hello Hacker News</div>
+<div dataTest={{ test: true }}>Hello Hacker News</div>
 ```
 
 The first set of `{}` escapes us from JSX mode. The next set creates our object.
