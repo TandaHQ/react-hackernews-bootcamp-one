@@ -1,7 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const element = <div>Hello Hacker News</div>;
+const title = 'Hello Hacker News';
+
+const element =
+  <div
+    style={{ fontSize: 36, color: 'green' }}
+    onClick={() => window.alert(title)}
+  >
+    {title}
+  </div>
 
 const root = document.getElementById('root');
 
