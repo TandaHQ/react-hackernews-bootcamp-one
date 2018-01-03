@@ -105,6 +105,17 @@ In JSX, to 'escape' from JSX mode, and get back to regular JavaSript, surround y
 <div>{10}</div>
 ```
 
+Similarly, you can do this with a variable, too.
+
+```jsx
+const myNum = 10;
+<div>{myNum}</div>;
+```
+
+**_Additional Exercise_**
+
+To check your understanding, try and write the above using `React.createElement`.
+
 If you want to add a number as a prop, you could do:
 
 ```jsx
@@ -181,22 +192,22 @@ const element =
 
 Save and reload, and click the name. You should get an alert.
 
-But we're better programmers than that. We're now using the same string twice - so let's refactor it into a variable.
+## Exercise
 
-```jsx
-const title = 'Hello Hacker News';
+We're better programmers than that. We're now using the same string twice - so let's refactor it into a variable.
 
-const element = 
-  <div
-    style={{ fontSize: 36, color: 'green' }}
-    onClick={() => window.alert(title)}
-  >
-    {title}
-  </div>
-```
+Your challenges are:
 
-We've just escaped from JSX mode to add a child that is a variable. We have used that same variable in the `onClick` handler.
+  - Refactor 'Hello Hacker News' into a variable
+  - Use that variable for all instances in the code.
 
-Save and reload for a final time to make sure it all works.
+If you get stuck with this section, try re-reading the [Some More JSX](#some-more-jsx) section.
 
-That's the end of this chapter. You can view the entire project as it should be by going [here](https://github.com/TandaHQ/react-hackernews-bootcamp-one/tree/chapter-one). This is the starting point for `chapter-one`, too.
+If you can't get it, don't stress. Ask the people around you, ask us, or check the final solution [here](https://github.com/TandaHQ/react-hackernews-bootcamp-one/tree/chapter-one).  This is the beginning of `chapter-one`, which is where we'll pick up. Your code base should match this one (hint: you've only edited `source/index.js`).
+
+That's the end of the chapter.
+
+**_Additional Exercise_**
+
+If you get done early, why not have a go at writing it using `React.createElement`.
+
