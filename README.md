@@ -11,7 +11,7 @@ A few things to get you started:
 - We also use `yarn` for dependency management (more explained in `chapters/zero.md`), which you can install with `npm i -g yarn`, providing you have `node` installed.
 
 This course is broken into chapters. You can find them in the `chapters` folder, starting at `zero.md`.
-Once you finished a chapter, your code will be in the correct state to move onto the next chapter.
+Once you finish a chapter, your code will be in the correct state to move onto the next chapter.
 Each chapter is also a `branch` on [`git`](https://git-scm.com/). You don't need to know how to use `git` to do the bootcamp, but it may come in handy.
 
 When you complete the work from `chapters/zero.md`, your code will be in the same state as `chapter-one` in the repository, and so on. If this makes no sense to you, don't worry! We'll help you out.
