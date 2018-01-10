@@ -31,11 +31,23 @@ const LOREM_IPSUM =
 
 // our static hacker new feed
 const VIEW =
-  <Article
-    description={LOREM_IPSUM}
-    link="google.com/foobar"
-    title="Article 1"
-  />
+  <div>
+    <Article
+      description={LOREM_IPSUM}
+      link="https://google.com"
+      title="Article 1"
+    />
+    <Article
+      description={LOREM_IPSUM}
+      link="https://google.com"
+      title="Article 2"
+    />
+    <Article
+      description={LOREM_IPSUM}
+      link="https://google.com"
+      title="Article 3"
+    />
+  </div>
 
 
 ReactDOM.render(VIEW, document.getElementById('root'));
