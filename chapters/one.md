@@ -57,3 +57,73 @@ Using this concept (along with some other nifty tricks) throughout the bootcamp 
 **_Additional Exercise_**
 
 How about we try making the threeElements into its own component?
+
+## Property driven components
+
+Apart from the ability to compose, components also have an interface to make them behave differently depending on attributes we assign them. These attributes are defined just like html attributes are (reminder attributes are _camelCase_ in react)
+
+```jsx
+// html attributes
+<input onclick={myFunc} />
+
+// jsx properties
+<input onClick={myFunc} />
+```
+
+If we wanted our `Element` to use properties defined on it we need to update the definition. The properties that get defined on the component are all passed to the first argument of our component as an object. We can then use them in the component by setting properties on its internal components or as text nodes. Heres an example:
+
+```jsx
+// as you can see the component is accessing a property called message
+// and displaying it as a text node inside a div.
+//
+// note: the some of the function definition has been removed for clarity.
+//
+function Element(props) {
+  return (
+    <div>
+      {props.message}
+    </div>
+  )
+}
+
+// We can now define message and the component
+// will use it.
+const element =
+  <Element
+    message="Hello Hacker News"
+  />
+
+// Another example
+const element =
+  <div>
+    <Element
+      message="Article 1"
+    />
+    <Element
+      message="Article 2"
+    />
+    <Element
+      message="Article 3"
+    />
+  </div>
+```
+
+## Exercise
+
+Try making a component that:
+- is called `Article`
+- accepts three props: title, description, and link.
+- returns an element displaying the title, description and link.
+
+Then try using it! Dont worry about making it 💅 (pretty) we will be looking at this next.
+
+
+**_Additional Exercise_**
+
+- Use our new `Article` component to make a list of fake news articles.
+- Make the link in the `Article` work. (hint: if you know how to do this in HTML, then you already know how to do this in React)
+
+
+**_Extra Additional Exercise_**
+
+The component type we have used at this stage is known as a stateless component. Try defining a Stateful Component using an es6 class. You can look at the api [here](https://reactjs.org/docs/components-and-props.html). These allow for a whole range of more complex features.
