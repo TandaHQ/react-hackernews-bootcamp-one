@@ -1,22 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-/**
- * our first component, accepts 2 props:
- * - title (of article)
- * - link (to article)
- * - description (of article)
- */
-function Article(props) {
-  return (
-    <article>
-      <h3>{props.title}</h3>
-      <p>{props.description}</p>
-      <a href={props.link}>{props.link}</a>
-    </article>
-  )
-}
+import Article from "./Component/Article"
 
 
 // random description
