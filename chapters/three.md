@@ -71,3 +71,59 @@ const ARTICLES = [
 //
 ```
 
+# A List View
+Commonly in a user interface we have to represent an array of things of which we do not know the length of until compute time. For example, if we were trying to display all the articles from hacker news for a specific week, the array of articles may vary in length. How do we do this then? The answer lies in Array#map.
+
+### Mapping
+If we have an array of values such as `[1, 2, 3]` and wanted to double them, we can map them like so:
+
+```js
+const numbers = [1, 2, 3]
+
+const doubles = numbers.map(a => a * 2) // [2, 4, 6]
+```
+
+if we wanted to change there type we can still use map:
+
+```js
+const numbers = [1, 2, 3]
+
+const strings = numbers.map(a => a.toString()) // ['1', '2', '3']
+```
+
+finally, if we wanted to make them into components:
+
+```js
+const numbers = [1, 2, 3]
+
+const components = numbers.map(a => (
+  <span key={a}>{a}</span>
+)) // [<span>1</span>, <span>2</span>, <span>3</span>]
+```
+
+Yup thats right we can map to react elements just like they were any other value!
+
+### The catch
+
+You will notice in the example mapping numbers to react components, I have assigned the value to a property on the span called `key`. why is this?
+
+It is because when our list gets rendered time and time again, react needs to be able to tell which component are the same as last render. The key you provide should be unique to the value the component is representing. To use the hackernews feed as an example, if the component you are mapping to, represents one of the articles from the api, the `id` of the article would be a good key as it is unique to the article.
+
+
+## Excercise
+
+Lets change the definition of our `NewsFeed` component to take an array of hackernews articles, and map them to `Article` components, then render them inside a `div`.
+
+```jsx
+// Usage should be like so:
+//
+//    <NewsFeed
+//      articles={ARTICLES}
+//    />
+//
+
+```
+
+**_Additional Exercise_**
+
+Lets refactor our NewsFeed component into its own file. This file should be `source/View/NewsFeed/index.jsx`

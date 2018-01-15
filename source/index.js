@@ -5,24 +5,17 @@ import Article from "./Component/Article"
 
 
 function NewsFeed(props) {
+  const articles = props.articles.map(article =>
+    <Article
+      description={article.description}
+      key={article.id}
+      link={article.link}
+      title={article.title}
+    />
+  )
+
   return (
-    <div>
-      <Article
-        description={props.article1.description}
-        link={props.article1.link}
-        title={props.article1.title}
-      />
-      <Article
-        description={props.article2.description}
-        link={props.article2.link}
-        title={props.article2.title}
-      />
-      <Article
-        description={props.article3.description}
-        link={props.article3.link}
-        title={props.article3.title}
-      />
-    </div>
+    <div>{articles}</div>
   )
 }
 
@@ -58,9 +51,7 @@ const ARTICLES = [
 
 const VIEW =
   <NewsFeed
-    article1={ARTICLES[0]}
-    article2={ARTICLES[1]}
-    article3={ARTICLES[2]}
+    articles={ARTICLES}
   />
 
 
