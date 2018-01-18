@@ -1,23 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Article from "./Component/Article"
-
-
-function NewsFeed(props) {
-  const articles = props.articles.map(article =>
-    <Article
-      description={article.description}
-      key={article.id}
-      link={article.link}
-      title={article.title}
-    />
-  )
-
-  return (
-    <div>{articles}</div>
-  )
-}
+import NewsFeed from './View/NewsFeed';
 
 
 const LOREM_IPSUM =
