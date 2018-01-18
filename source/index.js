@@ -3,6 +3,27 @@ import ReactDOM from 'react-dom';
 
 import NewsFeed from './View/NewsFeed';
 
+class Container extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { articles: [] };
+  }
+
+  componentWillMount() {
+    setTimeout(() =>
+      this.setState({ articles: ARTICLES })
+    , 3000);
+  }
+
+  render() {
+    return (
+      <NewsFeed
+        articles={this.state.articles}
+      />
+    );
+  }
+}
+
 
 const LOREM_IPSUM =
   `
@@ -31,12 +52,9 @@ const ARTICLES = [
     link: 'https://google.com',
     title: 'Article 3',
   },
-]
+];
 
-const VIEW =
-  <NewsFeed
-    articles={ARTICLES}
+ReactDOM.render(
+  <Container
   />
-
-
-ReactDOM.render(VIEW, document.getElementById('root'));
+, document.getElementById('root'));
