@@ -7,22 +7,22 @@ import NewsFeed from './View/NewsFeed';
 class Container extends React.Component {
   constructor(props) {
     super(props);
+    this.loadArticles = this.loadArticles.bind(this);
     this.state = { articles: [] };
   }
 
-  componentWillMount() {
-    getArticles().then(articles =>
+  loadArticles() {
+    return getArticles().then(articles =>
       this.setState({ articles })
-    , 3000);
+    );
   }
 
   render() {
-    return this.state.articles.length > 0 ? (
+    return (
       <NewsFeed
         articles={this.state.articles}
+        onMount={this.loadArticles}
       />
-    ) : (
-      <div>Loading...</div>
     );
   }
 

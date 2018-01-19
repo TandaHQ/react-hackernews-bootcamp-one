@@ -1,7 +1,8 @@
 import React from 'react';
 import Article from '../../Component/Article';
+import Loadable from '../../Util/Loadable';
 
-export default function NewsFeed(props) {
+export function NewsFeed(props) {
   const articles = props.articles.map(article =>
     <Article
       description={article.by}
@@ -15,3 +16,6 @@ export default function NewsFeed(props) {
     <div>{articles}</div>
   )
 }
+
+export default Loadable(NewsFeed)
+
