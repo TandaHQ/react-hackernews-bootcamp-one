@@ -26,8 +26,14 @@ Our application source will live in `source/`. If you look in there now, there i
 
 Let's start off by adding the dependencies we need right now. To get started, at least, we need `react` and `react-dom`. Install these like this, from your terminal.
 
+Install all existing dependencies by typing in the terminal:
+
 ```
-yarn install react react-dom
+yarn
+```
+
+```
+yarn add react react-dom
 ```
 
 ## React
