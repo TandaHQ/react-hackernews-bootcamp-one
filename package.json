@@ -24,6 +24,7 @@
     "start": "NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
+    "hacker-news-top-ten": "^1.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }

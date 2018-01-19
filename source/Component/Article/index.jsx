@@ -16,14 +16,14 @@ export default function Article(props) {
         {props.title}
       </h3>
       <p className={styles.desc}>
-        {props.description}
-        <a
-          className={styles.link}
-          href={props.link}
-        >
-          {props.link}
-        </a>
+        by {props.description}
       </p>
+      <a
+        className={styles.link}
+        href={props.link}
+      >
+        {props.link}
+      </a>
     </article>
   )
 }
