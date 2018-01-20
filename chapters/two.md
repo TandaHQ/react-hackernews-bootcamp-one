@@ -20,6 +20,9 @@ React components are designed to be used just like any standard export in javasc
 how to export a component:
 
 ```js
+import React from "react";
+import ReactDom from "react-dom";
+
 // source/Component/HelloWorld/index.jsx
 export default function HelloWorld() {
   return (
