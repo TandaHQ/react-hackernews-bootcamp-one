@@ -3,7 +3,7 @@
 We now have an app that loads and renders hackernews article details, that even shows a loading state, while requesting data woo hoo! but what if we wanted to build more features into the app, theres most likely going to be more api integration, and places we may need to show things load. like comments on articles for example. How can we reuse the loading pattern without duplicating code? how can we make it so if in future we want to change the loading view we can change it everywhere? We can create Higher Order Components to solve this problem.
 
 # Higher Order Components (HOC)
-To construct a higher order components the general patter is:
+To construct a higher order components the general pattern is:
 
 ```jsx
 // this function creates a HOC that injects one prop call `text` into the original version of the component
