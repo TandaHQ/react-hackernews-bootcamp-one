@@ -10,7 +10,7 @@ source/
     |- Article/
       |- index.jsx
       |- styles.css
-  |- index.jsx
+  |- index.js
 
 ```
 
