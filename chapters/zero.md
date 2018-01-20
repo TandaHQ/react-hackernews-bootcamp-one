@@ -16,7 +16,9 @@ The bundle file contains all of your code, and all of your dependencies' code. I
 
 `yarn` is a package manager built by Facebook that helps install and manage any code dependencies for your projects. It is similar to `npm`, which comes with `node`, but has advantages such as improved install speeds and shortened commands.
 
-You will need to have `yarn` installed. You can add this if you don't have it with `npm i -g yarn`. After that, to add dependencies, use `yarn add <dependency>`, and to start the server, use `yarn start`. You can start the server now and leave it running in the background - it will create a new bundle every time you change a file. It should also open your browser - if it doesn't, navigate to http://localhost:8082. You should see a message there that says 'Hello Hacker News'.
+You will need to have `yarn` installed. You can add this if you don't have it with `npm i -g yarn`.
+Once you have `yarn`, you need to install all the existing dependencies with `yarn install`.
+After that, to add dependencies, use `yarn add <dependency>`, and to start the server, use `yarn start`. You can start the server now and leave it running in the background - it will create a new bundle every time you change a file. It should also open your browser - if it doesn't, navigate to http://localhost:8082. You should see a message there that says 'Hello Hacker News'.
 
 ### Current Application
 
@@ -25,12 +27,6 @@ Our application source will live in `source/`. If you look in there now, there i
 ## Dependencies
 
 Let's start off by adding the dependencies we need right now. To get started, at least, we need `react` and `react-dom`. Install these like this, from your terminal.
-
-Install all existing dependencies by typing in the terminal:
-
-```
-yarn
-```
 
 ```
 yarn add react react-dom
