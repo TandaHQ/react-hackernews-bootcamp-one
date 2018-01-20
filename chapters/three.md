@@ -82,7 +82,7 @@ const doubles = numbers.map(value => value * 2)
 // [2, 4, 6]
 ```
 
-If we wanted to change there type we can still use map:
+If we wanted to change their type we can still use map:
 
 ```js
 const numbers = [1, 2, 3]
